@@ -1,0 +1,27 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 0px;
+  margin: 0px;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.intro div {
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.intro h2 {
+  font-size: 1.5rem;
+}
+
+.intro img {
+  background-color: aqua;
+
+  width: 600px;
+  height: auto;
+}
