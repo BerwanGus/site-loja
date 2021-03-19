@@ -10,6 +10,14 @@
   align-items: center;
 }
 
+header {
+  height: 80px;
+  width: 90%;
+  margin: auto;
+  justify-content: center;
+  background-color: aqua;
+}
+
 .intro div {
   font-size: 1.5rem;
   margin: 1rem;
