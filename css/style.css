@@ -64,4 +64,5 @@ header nav {
 .intro img {
   width: 600px;
   height: auto;
+  filter: drop-shadow(0.2rem 0.2rem 0.3rem black);
 }
