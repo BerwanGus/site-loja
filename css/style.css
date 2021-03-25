@@ -4,17 +4,32 @@
   margin: 0px;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*HEADER CONFIG*/
 header {
   width: 90%;
   margin: auto;
+  font-weight: 600;
   justify-content: center;
+  background-color: black;
+  color: white;
+}
+
+header a {
+  color: white;
+  box-sizing: border-box;
+}
+
+header img {
 }
 
 header nav {
   display: flex;
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1.6rem;
   justify-content: space-around;
 }
 
