@@ -1,6 +1,5 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
-  border: 0px;
   margin: 0px;
 }
 
@@ -33,7 +32,7 @@ header nav {
   justify-content: space-around;
 }
 
-/*INTRO CONFIG*/
+/*INTRO, MAIN-PAGE CONFIG*/
 .intro {
   font-weight: normal;
   display: flex;
@@ -80,4 +79,29 @@ header nav {
   width: 500px;
   height: auto;
   filter: drop-shadow(0.3rem 0.5rem 0.3rem black);
+}
+
+/*MAIN, REGISTRATION-PAGE CONFIG*/
+#reg-page main {
+  position: relative;
+  height: 800px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.reg-form {
+  display: flex;
+  width: 300px;
+  margin: auto;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 1.5rem;
+}
+
+.reg-form-child {
+  margin: 1rem;
+  height: 1.5rem;
 }

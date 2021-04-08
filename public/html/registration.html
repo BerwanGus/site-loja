@@ -4,24 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body id="reg-page">
+    <header>
+      <!--header principal-->
+      <nav class="header-nav">
+        <a href="/public/html/contact.html" target="_blank"> Contact</a>
+        <a href="" target="blank"> Products</a>
+        <a href="" target="blank">
+          <img
+            src="/imgs/icons/shopping_cart-white-24dp.svg"
+            alt="Cart image"
+          />
+        </a>
+        <a href="/public/html/registration.html" target="_blank"> Login</a>
+      </nav>
+    </header>
     <main>
-      <form>
-        <input type="text" name="fname" id="fname" placeholder="First name." />
-        <input type="text" name="lname" id="lname" placeholder="Last name." />
-        <input type="password" name="pword" id="pword" placeholder="Password" />
+      <form class="reg-form">
         <input
+          class="reg-form-child"
+          type="text"
+          name="fname"
+          id="fname"
+          placeholder="First name."
+        />
+        <input
+          class="reg-form-child"
+          type="text"
+          name="lname"
+          id="lname"
+          placeholder="Last name."
+        />
+        <input
+          class="reg-form-child"
+          type="password"
+          name="pword"
+          id="pword"
+          placeholder="Password"
+        />
+        <input
+          class="reg-form-child"
           type="password"
           name="pword-val"
           id="pword-val"
           placeholder="Confirm password"
         />
-        <input type="button" id="r-formbutton" value="Submit" />
+        <input
+          class="reg-form-child"
+          type="button"
+          id="r-formbutton"
+          value="Submit"
+        />
       </form>
-
-      <input type="button" id="debugbutton" value="" />
     </main>
   </body>
 
@@ -43,15 +80,15 @@
           lname: document.getElementById("lname").value,
           pword: document.getElementById("pword").value,
         };
+
+        //Atribui um valor ao objeto user para referenciação.
+        user = user.id;
       } else {
         alert("Passwords not compatible.");
         return;
       }
-      //DESCOBRIR POR QUE A FUNÇÃO ALERT NÃO ESTÁ FUNCIONANDO SE COLOCADA
-      //APÓS A ATRIBUIÇÃO DO VALOR A USER!!!
+
       alert("User successfully added.");
-      //Atribui um valor ao objeto user para referenciação.
-      user = user.id;
 
       //Enviar o user à lista de usuários.
       users.push(user);
