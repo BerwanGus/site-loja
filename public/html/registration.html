@@ -11,22 +11,52 @@
       <form>
         <input type="text" name="fname" id="fname" placeholder="First name." />
         <input type="text" name="lname" id="lname" placeholder="Last name." />
+        <input type="password" name="pword" id="pword" placeholder="Password" />
+        <input
+          type="password"
+          name="pword-val"
+          id="pword-val"
+          placeholder="Confirm password"
+        />
+        <input type="button" id="r-formbutton" value="Submit" />
       </form>
+
+      <input type="button" id="debugbutton" value="" />
     </main>
   </body>
 
   <script>
+    //Lista de usuários.
     let users = [];
 
+    //Função para adicionar um usuário novo a partir da construção
+    //de um objeto user.
     function addUser() {
-      let user = {
-        fname: document.getElementById("fname").value,
-        lname: document.getElementById("lname").value,
-      };
+      //Variáveis para validação da senha.
+      let pword = document.getElementById("pword").value;
+      let pwordVal = document.getElementById("pword-val").value;
 
+      if (pword == pwordVal) {
+        let user = {
+          id: users.length,
+          fname: document.getElementById("fname").value,
+          lname: document.getElementById("lname").value,
+          pword: document.getElementById("pword").value,
+        };
+      } else {
+        alert("Passwords not compatible.");
+        return;
+      }
+      //DESCOBRIR POR QUE A FUNÇÃO ALERT NÃO ESTÁ FUNCIONANDO SE COLOCADA
+      //APÓS A ATRIBUIÇÃO DO VALOR A USER!!!
+      alert("User successfully added.");
+      //Atribui um valor ao objeto user para referenciação.
+      user = user.id;
+
+      //Enviar o user à lista de usuários.
       users.push(user);
-
-      console.log(users);
     }
+
+    document.getElementById("r-formbutton").addEventListener("click", addUser);
   </script>
 </html>
